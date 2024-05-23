@@ -137,3 +137,13 @@
     org_text=''.join(org_list)
     print('평문\n', org_text, '\n')
 ```
+## 사용예시
+'''
+plaintext = 'we will invade north korea tomorrow'
+print('plaintext\n', plaintext, '\n')
+keyword = 'peninsula'
+myEncryption = Playfair(plaintext, keyword)
+myEncryption.makeTable()
+myEncryption.Encryption()
+'''
+myEncryption.Decryption()

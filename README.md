@@ -2,9 +2,11 @@
 
 ## 암호화 방법
 
-1. **클래스 생성**
+###1. **클래스 생성**
     ```python
     class Playfair:
+<br>
+## (1) 생성자 정의, 인스턴스 변수를 생성
 
         def __init__(self, plain_text, key_word, key_table=[], cipher_list=[]):
             self.plain_text = plain_text
@@ -137,7 +139,7 @@
     org_text=''.join(org_list)
     print('평문\n', org_text, '\n')
 ```
-## 사용예시
+** 사용예시 **
 '''
 plaintext = 'we will invade north korea tomorrow'
 print('plaintext\n', plaintext, '\n')

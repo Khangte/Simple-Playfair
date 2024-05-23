@@ -14,10 +14,10 @@ class Playfair:
   
 ```python 
 def __init__(self, plain_text, key_word, key_table=[], cipher_list=[]):
-    self.plain_text = plain_text
-    self.key_word = key_word
-    self.key_table = key_table
-    self.cipher_list = cipher_list
+  self.plain_text = plain_text
+  self.key_word = key_word
+  self.key_table = key_table
+  self.cipher_list = cipher_list
 ```
 
 - plain_text : 평문
@@ -30,25 +30,28 @@ def __init__(self, plain_text, key_word, key_table=[], cipher_list=[]):
   
 ```python
 def makeTable(self):
-    # 중복 제거 후 keytext에 삽입
-    keytext=[]
-    for a in self.key_word:
-        if a not in keytext:
-            keytext.append(a)
-    # 'a'~'z' 알파벳 중 key_word에 사용되지 않은 글자 추가
-    alph = 'abcdefghijklmnopqrstuvwxyz'
-    for a in alph:
-        if a not in keytext:
-            if a != 'j':
-                keytext.append(a)
-    # key_table에 5x5 암호판 생성
-    for i in range(5):
-        self.key_table.append('')
-    self.key_table[0] = keytext[0:5]
-    self.key_table[1] = keytext[5:10]
-    self.key_table[2] = keytext[10:15]        
-    self.key_table[3] = keytext[15:20]
-    self.key_table[4] = keytext[20:25]
+# 입력받은 key_word 변수에서 중복되는 알파벳을 제거하고 순서대로 keytext 리스트에 삽입
+  keytext=[]
+  for a in self.key_word:
+    if a not in keytext:
+      keytext.append(a)
+
+# ‘a’~‘z’ 알파벳 중 key_word에 사용되지 않은 글자를 keytext에 추가
+# (‘i’와 ‘j’는 같은 단어 취급을 위해 ‘j’는 key_table에서 제외)
+  alph = 'abcdefghijklmnopqrstuvwxyz'
+  for a in alph:
+    if a not in keytext:
+      if a != 'j':
+        keytext.append(a)
+
+# key_table에 5개의 빈 공간을 만들고, 각 공간마다 5개의 keytext에 삽입된 알파벳을 2차원 리스트 key_table에 순서대로 삽입
+  for i in range(5):
+    self.key_table.append('')
+  self.key_table[0] = keytext[0:5]
+  self.key_table[1] = keytext[5:10]
+  self.key_table[2] = keytext[10:15]        
+  self.key_table[3] = keytext[15:20]
+  self.key_table[4] = keytext[20:25]
 ```
 
 (3) **암호화 함수**

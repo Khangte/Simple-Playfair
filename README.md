@@ -59,6 +59,7 @@ def makeTable(self):
     print(self.key_table[i])
   print('\n')
 ```
+<br>
 
 - ## (3) 암호화 함수
 ```python
@@ -139,6 +140,7 @@ def Encryption(self):
   cipher_text=''.join(self.cipher_list)
   print('cipher_text\n', cipher_text, '\n')
 ```
+<br>
 
 - ## (4) 복호화 함수 정의
 ```python
@@ -197,7 +199,7 @@ def Decryption(self):
 <br>
 
 ## *사용예시*
-'''python
+```python
 plaintext = 'we will invade north korea tomorrow'
 print('plaintext\n', plaintext, '\n')
 keyword = 'peninsula'

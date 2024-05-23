@@ -2,12 +2,13 @@
 
 ## 암호화 방법
 
-###1. **클래스 생성**
+### 1. **클래스 생성**
     ```python
     class Playfair:
+    ```
 <br>
 ## (1) 생성자 정의, 인스턴스 변수를 생성
-
+    ```python
         def __init__(self, plain_text, key_word, key_table=[], cipher_list=[]):
             self.plain_text = plain_text
             self.key_word = key_word

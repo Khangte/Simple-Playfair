@@ -3,9 +3,17 @@
 ## 암호화 방법
 
 ### 1. **클래스 생성**
-    ```python
-    class Playfair:
-    ```
+   ```js
+function makeDeveloper(name, language) {
+  if (name === 'ONE:A' && language === 'JavaScript') {
+    return 'perfect!';
+  }
+
+  return false;
+}
+
+makeDeveloper('ONE:A', 'JavaScript');
+```
 <br>
 ## (1) 생성자 정의, 인스턴스 변수를 생성
     ```python

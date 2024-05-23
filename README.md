@@ -1,18 +1,11 @@
 # 다중치환 암호화 - 플레이페어 암호화
 
 ## 암호화 방법
+### 다중치환 암호화 중 플레이페어 암호화를 활용하여 암호화/복호화를 구현했습니다.
 
 ### 1. **클래스 생성**
-   ```js
-function makeDeveloper(name, language) {
-  if (name === 'ONE:A' && language === 'JavaScript') {
-    return 'perfect!';
-  }
-
-  return false;
-}
-
-makeDeveloper('ONE:A', 'JavaScript');
+```python  
+class Playfair:
 ```
 <br>
 ## (1) 생성자 정의, 인스턴스 변수를 생성

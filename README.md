@@ -1,7 +1,7 @@
 # 다중치환 암호화 - 플레이페어 암호화
 
 ## 암호화 방법
-### 다중치환 암호화 중 플레이페어 암호화를 활용하여 암호화/복호화를 구현했습니다.
+다중치환 암호화 중 플레이페어 암호화를 활용하여 암호화/복호화를 구현했습니다.
 
 ### 1. **클래스 생성**
 ```python  
@@ -9,15 +9,15 @@ class Playfair:
 ```
 <br>
 ## (1) 생성자 정의, 인스턴스 변수를 생성
-    ```python
-        def __init__(self, plain_text, key_word, key_table=[], cipher_list=[]):
-            self.plain_text = plain_text
-            self.key_word = key_word
-            self.key_table = key_table
-            self.cipher_list = cipher_list
-    ```
+```python
+    def __init__(self, plain_text, key_word, key_table=[], cipher_list=[]):
+        self.plain_text = plain_text
+        self.key_word = key_word
+        self.key_table = key_table
+        self.cipher_list = cipher_list
+```
 
- (2) **5x5 알파벳 암호판 생성 함수**
+## (2) **5x5 알파벳 암호판 생성 함수**
     ```python
     def makeTable(self):
         # 중복 제거 후 keytext에 삽입

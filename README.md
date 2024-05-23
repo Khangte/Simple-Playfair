@@ -3,21 +3,25 @@
 ## 암호화 방법
 다중치환 암호화 중 플레이페어 암호화를 활용하여 암호화/복호화를 구현했습니다.
 
-### 1. **클래스 생성**
+## 1. **클래스 생성**
 ```python  
 class Playfair:
 ```
 <br>
-(1) 생성자 정의, 인스턴스 변수를 생성
-```python
+### (1) 생성자 정의, 인스턴스 변수를 생성
+```python 
 def __init__(self, plain_text, key_word, key_table=[], cipher_list=[]):
     self.plain_text = plain_text
     self.key_word = key_word
     self.key_table = key_table
     self.cipher_list = cipher_list
 ```
-
-## (2) **5x5 알파벳 암호판 생성 함수**
+plain_text : 평문
+key_word : 암호화에 사용될 키워드
+key_table : 5x5 2차원 리스트 암호판
+cipher_list : 암호문(리스트)
+<br>
+### (2) **5x5 알파벳 암호판 생성 함수**
     ```python
     def makeTable(self):
         # 중복 제거 후 keytext에 삽입
